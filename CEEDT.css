@@ -50,6 +50,7 @@ header{
 .nav-item{
     width: fit-content;
     position: relative;
+    height: 52px;
 }
 header a{
     text-decoration: none;
