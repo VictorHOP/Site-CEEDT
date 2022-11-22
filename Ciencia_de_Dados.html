@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fc90ff440a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/js/bootstrap.min.js">
+    <link rel="stylesheet" href="CEEDT.css">
+    <script src="js/script.js"></script>
     <title>Ciência da Computação - CEEDT</title>
 </head>
-<script src="https://kit.fontawesome.com/fc90ff440a.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<link rel="stylesheet" href="/js/bootstrap.min.js">
-<link rel="stylesheet" href="CEEDT.css">
 
 <body>
 
@@ -47,12 +49,17 @@
                             <a class="nav-link" href="Site-Ceedt-Home.html#noticias">Notícias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html"><img src="login.png" alt="Imagen login" width="26px"
-                                    height="26px"> Login</a>
+                            <a class="nav-link" href="login.html"><img class="img-login" src="icone-login.png"
+                                    alt="Imagen login" width="30px" height="30px">
+                                Login</a>
                         </li>
-                        <div class="pesquisa mb-3">
-                            <img src="lupa.png" height="26px" width="26px">
-                            <input type="text" placeholder="Pesquisar">
+                        <div class="pesquisa">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="9.05883" cy="9.05883" r="7.55883" stroke="white" stroke-width="3" />
+                                <path d="M21.9995 22L14.8818 14.8823" stroke="white" stroke-width="3" />
+                            </svg>
+                            <input class="ms-2" type="text" placeholder="Pesquisar">
                         </div>
                     </ul>
                 </div>
@@ -89,11 +96,11 @@
                         <div class="d-flex flex-column">
                             <div class="d-flex">
                                 <div class="c-flex">
-                                    <img class="icones" src="ic-corpodocente.png" alt="Icone de Corpo docente" width="35px"
-                                        height="35px" />
-        
+                                    <img class="icones" src="ic-corpodocente.png" alt="Icone de Corpo docente"
+                                        width="35px" height="35px" />
+
                                     <a href="#ModalDocente">Corpo Docente</a>
-        
+
                                     <div id="ModalDocente" class="modal">
                                         <a href="#fechar" title="Fechar" class="fechar">x</a>
                                         <h2>Corpo Docente</h2>
@@ -104,41 +111,43 @@
                                         <p>INTERAÇÃO HUMANO-COMPUTADOR: Matheus Silva</p>
                                         <hr />
                                         <p>Para mais informações consulte a grade curricular.</p>
-        
+
                                     </div>
                                 </div>
-        
+
                                 <div class="c-flex">
                                     <img class="icones" src="dinheiro.png" alt="Icone de Investimento" />
                                     <a href="#ModalInvest">Investimento</a>
-        
+
                                     <div id="ModalInvest" class="modal">
                                         <a href="#fechar" title="Fechar" class="fechar">x</a>
                                         <h2>Mensalidade</h2>
                                         <p>Esse curso tem o valor de : R$ 436,00 por mês</p>
-                                        <p>Você pode adquirir desconto de 5% do valor da mensalidade pagando no 1º dia útil do
+                                        <p>Você pode adquirir desconto de 5% do valor da mensalidade pagando no 1º dia
+                                            útil do
                                             mês</p>
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="d-flex">
                                 <div class="c-flex">
                                     <img class="icones" src="book.png" alt="Icone de Grade Curricular" />
                                     <a href="#grade">Grade Curricular</a>
                                 </div>
-        
+
                                 <div class="c-flex">
                                     <img class="icones" src="ask.png" alt="Icone de Informações" />
                                     <a href="#ModalInfo">Outras informações</a>
-        
+
                                     <div id="ModalInfo" class="modal">
                                         <a href="#fechar" title="Fechar" class="fechar">x</a>
                                         <h2>Basta preencher o formulário e entramos em contato</h2>
                                         <label>Nome:</label><br />
                                         <input type="text" name="nome" placeholder="Insira seu nome" required><br />
                                         <label>E-mail:</label><br />
-                                        <input type="email" name="email" placeholder="mail@exemplo.com.br" required><br />
+                                        <input type="email" name="email" placeholder="mail@exemplo.com.br"
+                                            required><br />
                                         <label>Telefone:</label><br />
                                         <input type="tel" name="tel" placeholder="(DDD) 12345-6789" required><br />
                                     </div>
@@ -372,11 +381,37 @@
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 d-flex flex-column align-items-center">
+
+                        <h4 class="mb-3 pt-4">Cursos de interesse</h4>
+                        <div>
+                            <table id="grid" class="m-0 table-cursos pt-0 mb-3">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-primary"><input type="checkbox" id="ckTodos" onchange=""></th>
+                                        <th class="bg-primary text-white">Cursos</th>
+                                        <th class="bg-primary"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tb-body">
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mb-3">
+                            <input type="button" value="Excluir selecionados" id="btnExcluirSelecionados">
+                            <input type="button" value="Enviar" id="btnSelecionados">
+                        </div>
+                        <label for="suge"><strong>Sugestões de curso:</strong></label> <br>
+                        <div>
+                            <input type="text" id="txt-texto" />
+                            <input type="button" id="txt-add" value="+" />
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-
-
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
