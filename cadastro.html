@@ -11,6 +11,7 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="js/script.js"></script>
   <link rel="stylesheet" href="CEEDT.css">
+  <script type="text/javascript" src="js/funcoes.js"></script>
   <title>Cadastro</title>
 </head>
 
@@ -86,7 +87,7 @@
           <div class="col-md-6 mb-3">
             <label for="sobrenome">Sobrenome</label>
             <input type="text" class="form-control" id="sobrenome" placeholder="Insira seu sobrenome" value=""
-              required="" onkeyup="verificaNome(this.value)">
+              required="" onkeyup="verificasobreNome(this.value)">
             <div class="invalid-feedback">
               É obrigatório inserir um sobrenome válido.
             </div>
@@ -125,7 +126,7 @@
           <div class="col-12 col-sm-6">
             <label for="cpf">CPF</label>
             <input type="text" class="form-control" id="cpf" placeholder="Ex: 980467257-53"
-              onkeyup="verificaCPF(this.value)">
+              onblur="validarCPF()">
           </div>
         </div>
 
@@ -233,74 +234,7 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script type="text/javascript">
-    function verificaCel(data) {
-      var retorna = document.getElementById('cel');
-      const regexCel = new RegExp('^[0-9]{10,11}$');
-      if (regexCel.test(data)) {
-        retorna.style.color = "green"
-      }
-      else {
-        retorna.style.color = "red"
-      }
-    }
 
-    function verificaEmail(data) {
-      var retorna = document.getElementById('email');
-      const regexEmail = new RegExp(/^(\w+[\-\.])*\w+@(\w+\.)+[A-Za-z]+$/);
-      if (regexEmail.test(data)) {
-        retorna.style.color = "green"
-      }
-      else {
-        retorna.style.color = "red"
-      }
-    }
-
-    function verificaCPF(data) {
-      var retorna = document.getElementById('cpf');
-      const regexCPF = new RegExp('^[0-9]{11}$');
-      if (regexCPF.test(data)) {
-        retorna.style.color = "green"
-      }
-      else {
-        retorna.style.color = "red"
-      }
-    }
-    function verificaCEP(data) {
-      var retorna = document.getElementById('cep');
-      const regexCEP = new RegExp('^[0-9]{8}$');
-      if (regexCEP.test(data)) {
-        retorna.style.color = "green"
-      }
-      else {
-        retorna.style.color = "red"
-      }
-    }
-
-    function verificaNome() {
-      var inputnome = document.getElementById("primeiroNome");
-      var inputsobrenome = document.getElementById("sobrenome");
-      var nome = document.getElementById("primeiroNome").value;
-      var sobrenome = document.getElementById("sobrenome").value;
-
-      var padrao = /[^a-zà-ú]/gi;
-
-      var valida_nome = nome.match(padrao);
-      var valida_sobrenome = sobrenome.match(padrao);
-      // Nome possui caracteres inválidos ou é vazio
-      if (valida_nome || !nome) {
-        inputnome.style.color = "red";
-      } else {
-        inputnome.style.color = "green";
-      }
-      // Sobrenome possui caracteres inválidos ou é vazio
-      if (valida_sobrenome || !sobrenome) {
-        inputsobrenome.style.color = "red";
-      } else {
-        inputsobrenome.style.color = "green";
-      }
-    }
-  </script>
 </body>
 
 </html>
